@@ -1,0 +1,26 @@
+{
+  "name": "simple-alert",
+  "version": "1.0.0",
+  "url": "https://github.com/vishakha070/simple-alert",
+  "license": "GPL-2.0+",
+  "description": "This plugin provides option to add alert message for pages, posts and custom post types.",
+  "devDependencies": {
+    "eslint": "^4.15.0",
+    "eslint-plugin-wordpress": "^0.1.0",
+    "grunt": "~1.0.1",
+    "grunt-check-dependencies": "~1.0.0",
+    "grunt-checktextdomain": "^1.0.1",
+    "grunt-jsvalidate": "~0.2.2",
+    "grunt-wp-i18n": "^1.0.1"
+  },
+  "engines": {
+    "node": ">=6.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vishakha070/simple-alert"
+  },
+  "dependencies": {
+    "load-grunt-tasks": "^3.5.2"
+  }
+}
