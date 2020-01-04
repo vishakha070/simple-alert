@@ -123,6 +123,7 @@ class Simple_Alert_Admin {
 	 * @access public
 	 */
 	public function simple_alert_settings_page() {
+
 		$pages     = get_all_page_ids();
 		$page_list = array();
 		if ( ! empty( $pages ) ) {
@@ -154,6 +155,7 @@ class Simple_Alert_Admin {
 		}
 
 		include 'partials/simple-alert-admin-display.php';
+
 	}
 
 }
