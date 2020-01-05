@@ -44,8 +44,11 @@ class Simple_Alert_Functions {
 
 		$sa_settings = array();
 		$settings    = array();
-		if ( is_multisite() && is_plugin_active_for_network( SIMPLE_ALERT_PLUGIN_BASENAME ) ) {
-			$sa_settings = get_site_option( 'simple_alert_general_settings' );
+		if ( is_multisite() ) {
+			include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+			if ( is_plugin_active_for_network( SIMPLE_ALERT_PLUGIN_BASENAME ) ) {
+				$sa_settings = get_site_option( 'simple_alert_general_settings' );
+			}	
 		} else {
 			$sa_settings = get_option( 'simple_alert_general_settings' );
 		}
@@ -53,7 +56,7 @@ class Simple_Alert_Functions {
 		if ( ! empty( $sa_settings['alert_message'] ) ) {
 			$alert_message = $sa_settings['alert_message'];
 		}
-		$settings['alert_message'] = $alert_message;	
+		$settings['alert_message'] = $alert_message;
 		$enable_on_pages = false;
 		if ( isset( $sa_settings['enable_on_pages'] ) ) {
 			$enable_on_pages = true;
