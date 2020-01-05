@@ -48,7 +48,9 @@ class Simple_Alert_Functions {
 			include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 			if ( is_plugin_active_for_network( SIMPLE_ALERT_PLUGIN_BASENAME ) ) {
 				$sa_settings = get_site_option( 'simple_alert_general_settings' );
-			}	
+			} else {
+				$sa_settings = get_option( 'simple_alert_general_settings' );
+			} 
 		} else {
 			$sa_settings = get_option( 'simple_alert_general_settings' );
 		}
