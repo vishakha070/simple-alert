@@ -165,7 +165,7 @@ class Simple_Alert_Public {
 			?>
 			<script>
 				jQuery(document).ready(function() {
-					alert( "<?php echo esc_html( $settings['alert_message'] ); ?>" );
+					alert( "<?php echo $settings['alert_message']; ?>" );
 				});
 			</script>
 			<?php
